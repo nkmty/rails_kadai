@@ -6,6 +6,9 @@ ja:
     back: "戻る"
     destroy: "削除"
     confirm: "削除してもよろしいでしょうか？"
+    confirm_save: "新規本データを作成しました。"
+    confirm_update: "本データを更新しました。"
+    confirm_destroy: "本データを削除しました。"
 
   activerecord:
     models:
