@@ -28,5 +28,5 @@
 </table>
 
 <br>
-
-<%= link_to t('view.new'), new_book_path %>
+<%= paginate @books %>
+<%= link_to 'New Book', new_book_path %>
