@@ -12,6 +12,8 @@ gem 'awesome_print'
 gem 'kaminari'
 
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
