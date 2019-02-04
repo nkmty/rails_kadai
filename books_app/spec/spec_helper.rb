@@ -96,12 +96,6 @@ RSpec.configure do |config|
 =end
 end
 
-
-
-
-
-
-
 def regist_test_data
     visit ('/books/new')
     fill_in('book_title', with: 'test_title')
