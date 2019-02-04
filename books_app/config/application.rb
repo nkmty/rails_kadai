@@ -16,7 +16,7 @@ module BooksApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.generators do |g|
-      g.test_framework = "rspec"
+      g.test_framework = 'rspec'
       g.controller_specs = false
       g.helper_specs = false
       g.view_specs = false
