@@ -1,36 +1,25 @@
- require 'rails_helper'
-# 
-# Rspec.describe BooksController, type: :controller do
-#     before do
-#       user = User.create(email: 'test@test.com', password: "password", password_confirmation: "password")
-#       sing_in user
-#     end
-#     it 'リクエストは200 OKとなること' do
-#       get :index
-#       expect(response.status).to eq 200
-#     end
-#     end
-
+require 'rails_helper'
 RSpec.describe BooksController, type: :controller do
+
   before do
-    sign_in User.create(email: "test@example.com", password: "testtesttest")
+    sign_in User.create(email: "test@gmail.com", password: "testtest")
   end
 
-  describe "#index" do
+  describe "indexメッドのテスト" do
     it "正常にレスポンスを返すこと" do
       get :index
       expect(response.status).to eq 200
     end
   end
 
-  describe "#new" do
+  describe "newメソッドをテスト" do
     it "正常にレスポンスを返すこと" do
       get :new
       expect(response.status).to eq 200
     end
   end
 
-  describe "#show" do
+  describe "showメソッドをテスト" do
     it "正常にレスポンスを返すこと" do
       book = Book.create(title: "test", memo: "testtest")
       get :show, params: { id: book.id }
@@ -38,7 +27,7 @@ RSpec.describe BooksController, type: :controller do
     end
   end
 
-  describe "edit" do
+  describe "editメソッドをテスト" do
     it "正常にレスポンスを返すこと" do
       book = Book.create(title: "test", memo: "testtest")
       get :edit, params: { id: book.id }
@@ -46,7 +35,7 @@ RSpec.describe BooksController, type: :controller do
     end
   end
 
-  describe "update" do
+  describe "updateメソッドをテスト" do
     it "正常にレスポンスを返すこと" do
       book = Book.create(title: "test", memo: "testtest")
       patch :update, params: { id: book.id, book: { title: "hoge", memo: "hogehoge", author: "fuga", picture: nil } }
@@ -54,13 +43,11 @@ RSpec.describe BooksController, type: :controller do
     end
   end
 
-  describe "destroy" do
+  describe "destroyメソッドをテスト" do
     it "正常にレスポンスを返すこと" do
       book = Book.create(title: "test", memo: "testtest")
       delete :destroy, params: { id: book.id }
       expect(response.status).to eq 302
     end
   end
-
 end
-
