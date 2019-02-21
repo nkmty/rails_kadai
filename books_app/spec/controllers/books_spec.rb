@@ -1,6 +1,5 @@
-require 'rails_helper'
+require "rails_helper"
 RSpec.describe BooksController, type: :controller do
-
   before do
     sign_in User.create(email: "test@gmail.com", password: "testtest")
   end
@@ -38,7 +37,7 @@ RSpec.describe BooksController, type: :controller do
   describe "updateメソッドをテスト" do
     it "正常にレスポンスを返すこと" do
       book = Book.create(title: "test", memo: "testtest")
-      patch :update, params: { id: book.id, book: { title: "hoge", memo: "hogehoge", author: "fuga", picture: nil } }
+      patch :update, params: { id: book.id, book: { title: "test2", memo: "testtest2" } }
       expect(response.status).to eq 302
     end
   end
